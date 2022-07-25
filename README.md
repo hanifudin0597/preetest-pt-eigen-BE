@@ -44,6 +44,13 @@ npm run start
 server/api-docs => example localhost:5007/api-docs
 ```
 
+- Or Can Visit documentation Swagger deploy
+```
+https://preetest-eigen.herokuapp.com/api-docs/
+```
+
+
+
 ### Setup .env example
 
 Create .env file in your root project folder.
