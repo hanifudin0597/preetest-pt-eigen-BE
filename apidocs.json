@@ -1,0 +1,170 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Library",
+    "contact": {}
+  },
+  "host": "localhost:5007",
+  "basePath": "/",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/borrow-book": {
+      "post": {
+        "summary": "borrow",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "borrow",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/borrowrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/list-book": {
+      "get": {
+        "summary": "getAllBooks",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAllBooks",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/list-member": {
+      "get": {
+        "summary": "getAllMember",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAllMember",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/return-book": {
+      "delete": {
+        "summary": "returnBook",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "returnBook",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/returnBookRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "borrowrequest": {
+      "title": "borrowrequest",
+      "example": {
+        "codeMember": "M001",
+        "codeBook": "NRN-7"
+      },
+      "type": "object",
+      "properties": {
+        "codeMember": {
+          "type": "string"
+        },
+        "codeBook": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "codeMember",
+        "codeBook"
+      ]
+    },
+    "returnBookRequest": {
+      "title": "returnBookRequest",
+      "example": {
+        "codeMember": "M001",
+        "codeBook": "NRN-7"
+      },
+      "type": "object",
+      "properties": {
+        "codeMember": {
+          "type": "string"
+        },
+        "codeBook": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "codeMember",
+        "codeBook"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
