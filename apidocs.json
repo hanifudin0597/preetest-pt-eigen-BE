@@ -5,7 +5,7 @@
     "title": "Library",
     "contact": {}
   },
-  "host": "https://preetest-eigen.herokuapp.com/",
+  "host": "https://preetest-eigen.herokuapp.com",
   "basePath": "/",
   "securityDefinitions": {},
   "schemes": [
