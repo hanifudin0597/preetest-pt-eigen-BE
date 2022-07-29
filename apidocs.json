@@ -5,7 +5,7 @@
     "title": "Library",
     "contact": {}
   },
-  "host": "ec2-44-206-214-233.compute-1.amazonaws.com",
+  "host": "https://preetest-eigen.herokuapp.com/",
   "basePath": "/",
   "securityDefinitions": {},
   "schemes": [
