@@ -3,13 +3,13 @@ const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const swaggerUi = require('swagger-ui-express')
+// const swaggerUi = require('swagger-ui-express')
 const { APP_NAME, NODE_ENV, PORT } = require('./src/utils/env')
 const borrow = require('./src/router/borrow.router')
 const book = require('./src/router/books.route')
 const member = require('./src/router/member.route')
 
-const swaggerDocument = require('./apidocs.json')
+// const swaggerDocument = require('./apidocs.json')
 
 // deklarasi express
 const app = express()
@@ -35,7 +35,7 @@ app.get('/', (req, res) =>
 
 app.use(borrow, book, member)
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 // 404 router
 app.use((req, res) => {
