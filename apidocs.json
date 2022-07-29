@@ -9,7 +9,7 @@
   "basePath": "/",
   "securityDefinitions": {},
   "schemes": [
-    "http"
+    "https"
   ],
   "consumes": [
     "application/json"
